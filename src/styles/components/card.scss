@@ -1,4 +1,21 @@
+h2 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-h2);
+    color: var(--color-secondary);
+    font-weight: 300;
+
+    margin-bottom: 100px;
+
+    span {
+        color: var(--color-white);
+        font-weight: bold;
+    }
+}
+
 .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     @media (width <= $breakpoint-md) {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -38,9 +55,32 @@
     flex-direction: column;
     gap: 16px;
 
-    h3,
-    p {
+    span {
+        font-weight: bold;
+        color: var(--color-white);
+    }
+
+    h3 {
         margin: 0;
+        font-family: var(--font-secondary);
+        font-size: var(--font-size-content);
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-family: var(--font-secondary);
+        font-size: var(--font-size-p);
+        font-weight: normal;
+        color: var(--color-secondary);
+        line-height: 150%;
+        margin: 0;
+    }
+
+    .tag {
+        font-size: var(--font-size-content);
+        font-weight: 300;
+        text-transform: uppercase;
     }
 }
 
@@ -52,5 +92,6 @@
         height: 100%;
         object-fit: cover;
         display: block;
+        border-radius: 25px;
     }
 }
